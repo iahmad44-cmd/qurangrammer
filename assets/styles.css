@@ -1,0 +1,28 @@
+:root{--green:#0f4c46;--mid:#1b6c63;--gold:#8f721c;--rose:#8b3a47;--ink:#1b1f2a;--muted:#4e5566;--paper:#fbfaf7;--line:#e2ded4;--white:#fff;--shadow:0 10px 30px rgba(15,76,70,.07)}
+*{box-sizing:border-box}
+html{background:var(--paper);color:var(--ink);scroll-behavior:smooth}
+body{margin:0;font-family:Lora,Georgia,serif;line-height:1.65}
+html[lang="ur"] body{font-family:"Noto Nastaliq Urdu","Jameel Noori Nastaleeq",serif;line-height:2.05}
+.skip-link{position:fixed;inset-inline-start:1rem;top:-5rem;z-index:10;background:var(--white);color:var(--green);padding:.6rem 1rem;border-radius:.25rem}.skip-link:focus{top:1rem}
+.site-header{background:var(--green);color:var(--white);border-bottom:5px solid var(--gold)}
+.header-inner,main{width:min(1120px,calc(100% - 40px));margin-inline:auto}
+.header-inner{min-height:220px;display:flex;align-items:center;justify-content:space-between;gap:3rem;padding:2.5rem 0}
+.eyebrow,.section-kicker{margin:0 0 .25rem;color:#d5c58f;font-size:.78rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
+html[lang="ur"] .eyebrow,html[lang="ur"] .section-kicker{letter-spacing:0;text-transform:none;font-size:.95rem}
+h1,h2,h3,p{margin-top:0}h1{font-size:clamp(2.4rem,6vw,4.8rem);line-height:1;margin-bottom:.7rem;letter-spacing:-.045em}html[lang="ur"] h1{font-family:Lora,Georgia,serif}
+.description{margin:0;color:#e5eeeb;font-size:1rem}.language-switch{display:flex;background:#0a3d38;border:1px solid rgba(255,255,255,.25);padding:.25rem;border-radius:.35rem;direction:ltr}
+.language-switch button{border:0;background:transparent;color:#dce9e6;font:700 .9rem Lora,Georgia,serif;padding:.7rem 1rem;border-radius:.23rem;cursor:pointer;transition:background 120ms,color 120ms}
+.language-switch button[aria-pressed="true"]{background:var(--white);color:var(--green)}.language-switch button:focus-visible,.button:focus-visible,input:focus-visible{outline:3px solid #d7b950;outline-offset:3px}
+main{padding:3.5rem 0 5rem}.toolbar{display:flex;align-items:end;justify-content:space-between;gap:2rem;padding-bottom:1.4rem;border-bottom:1px solid var(--line)}
+.section-kicker{color:var(--gold)}h2{font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.25;margin:0;color:var(--green)}
+.search-wrap{width:min(390px,100%)}.search-wrap label{display:block;font-size:.8rem;font-weight:700;color:var(--muted);margin-bottom:.35rem}
+input[type="search"]{width:100%;border:1px solid #c9c4b8;background:var(--white);color:var(--ink);font:inherit;line-height:1.3;padding:.75rem .9rem;border-radius:.3rem}html[lang="ur"] input{line-height:1.8}
+.availability-note{margin:1.25rem 0 .25rem;padding:.6rem .9rem;border-inline-start:3px solid var(--rose);background:#fff7f6;color:#65303a;font-size:.82rem}.result-count{margin:.9rem 0;color:var(--muted);font-size:.8rem}
+.lesson-list{margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}.lesson-card{display:grid;grid-template-columns:84px minmax(0,1fr) auto;gap:1.4rem;align-items:center;padding:1.45rem 0;border-bottom:1px solid var(--line);transition:background 120ms,border-color 120ms}.lesson-card:hover{background:#fff;border-color:#cbc4b4}
+.lesson-number{align-self:stretch;display:flex;flex-direction:column;justify-content:center;border-inline-end:1px solid var(--line);color:var(--muted);line-height:1.2}.lesson-number span{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em}.lesson-number strong{color:var(--green);font-size:1.55rem;margin-top:.15rem}
+.lesson-copy h3{margin:0 0 .25rem;color:var(--ink);font-size:1.17rem;line-height:1.45}.lesson-copy p{margin:0;color:var(--muted);font-size:.84rem;line-height:1.75}html[lang="ur"] .lesson-copy h3{font-size:1.25rem;line-height:2}html[lang="ur"] .lesson-copy p{font-size:.9rem;line-height:2.1}
+.lesson-actions{display:flex;gap:.55rem;direction:ltr}.button{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:.55rem .85rem;border:1px solid;border-radius:.25rem;font:700 .76rem Lora,Georgia,serif;text-decoration:none;white-space:nowrap;transition:background 120ms,border-color 120ms,color 120ms}.primary{background:var(--green);border-color:var(--green);color:#fff}.primary:hover{background:var(--mid);border-color:var(--mid)}.secondary{background:transparent;border-color:var(--gold);color:#66500c}.secondary:hover{background:#f5f0dd}.disabled{border-color:var(--line);background:#f2f0eb;color:#777;cursor:not-allowed}
+.empty-state{text-align:center;padding:4rem 1rem;color:var(--muted)}footer{text-align:center;border-top:1px solid var(--line);padding:2.3rem 1rem;color:var(--muted);font-size:.78rem}.dua{font-family:Amiri,serif;color:var(--green);font-size:1.4rem;margin-bottom:.2rem}footer p{margin-bottom:0}
+@media(max-width:700px){.header-inner{min-height:auto;align-items:flex-start;flex-direction:column;gap:1.6rem;padding:2rem 0}.toolbar{align-items:stretch;flex-direction:column;gap:1.3rem}.search-wrap{width:100%}.lesson-card{grid-template-columns:56px minmax(0,1fr);gap:1rem}.lesson-actions{grid-column:1/-1}.button{flex:1}.lesson-number strong{font-size:1.3rem}}
+@media(max-width:380px){.header-inner,main{width:min(100% - 28px,1120px)}h1{font-size:2.25rem}.lesson-card{padding:1.25rem 0}.lesson-actions{gap:.4rem}.button{padding:.5rem .55rem}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
