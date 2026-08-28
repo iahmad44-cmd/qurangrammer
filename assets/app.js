@@ -3,7 +3,7 @@ const lessons = [
   { id: "02", number: "2", urTitle: "لفظ اور کلمہ کی اقسام", urTopics: "لفظ، مہمل و کلمہ؛ اسم، فعل اور حرف؛ ان کی علامات؛ جملۂ اسمیہ و فعلیہ؛ تائے دراز و مربوطہ", enTitle: "Lafz and the categories of Kalimah", enTopics: "Lafz, Muhmal and Kalimah; Ism, Fi'l and Harf with their alamaat; Jumla Ismiyyah and Fi'liyyah; Taa' Daraz and Taa' Marbutah", files: { ur: { pdf: true }, en: { pdf: true } } },
   { id: "03", number: "3", urTitle: "اسم کا تعارف", urTopics: "اسم کی تعریف؛ ضمیر و صفت؛ رنگ، اسم الفاعل و المفعول، مبالغہ، تفضیل؛ اسم کی علامات اور اقسام", enTitle: "Introduction to the Ism", enTopics: "The definition of Ism; Dameer and Sifah; colours, Ism ul Fa'il and Maf'ul, Mubalaghah, Tafdeel; the marks and categories of the Ism", files: { ur: { pdf: true }, en: { pdf: true } } },
   { id: "04", number: "4", urTitle: "اسم کی جنس — مذکر و مؤنث", urTopics: "حقیقی و غیر حقیقی جنس؛ مؤنث کی اقسام؛ علاماتِ تانیث؛ حروفِ اصلی؛ سماعی مؤنث اور مشترک اسماء", enTitle: "The gender of the Ism", enTopics: "Real and unreal gender; the categories of Mu'annath; the marks of ta'neeth; Huroof Asliyyah; the Sama'i Mu'annath and shared nouns", files: { ur: { pdf: true }, en: { pdf: true } } },
-  { id: "05", number: "5", urTitle: "مذکر سے مؤنث بنانے کا طریقہ", urTopics: "جنس پہچاننے کا عملی طریقہ؛ گول ۃ کا قاعدہ؛ صفت و موصوف کی مطابقت؛ الوان و عیوب؛ اسمِ تفضیل", enTitle: "Forming the Mu'annath from the Mudhakkar", enTopics: "A practical method for gender; the round taa' rule; Sifah–Mawsuf agreement; Alwan and 'Uyub; the Ism ut Tafdeel", files: { ur: { pdf: false }, en: { pdf: true } } },
+  { id: "05", number: "5", urTitle: "مذکر سے مؤنث بنانے کا طریقہ", urTopics: "جنس پہچاننے کا عملی طریقہ؛ گول ۃ کا قاعدہ؛ صفت و موصوف کی مطابقت؛ الوان و عیوب؛ اسمِ تفضیل", enTitle: "Forming the Mu'annath from the Mudhakkar", enTopics: "A practical method for gender; the round taa' rule; Sifah–Mawsuf agreement; Alwan and 'Uyub; the Ism ut Tafdeel", files: { ur: { pdf: true }, en: { pdf: true } } },
   { id: "06", number: "6", urTitle: "عدد — واحد سے مثنّٰى بنانا", urTopics: "تثنیہ کا قاعدہ اور اعراب؛ الفِ ممدودہ و مقصورہ؛ ملحقاتِ تثنیہ؛ قاعدۂ تغلیب؛ مثنیٰ کی پہچان", enTitle: "'Adad — forming the Tathniyah", enTopics: "The rule and I'raab of the Tathniyah; Alif Mamdudah and Maqsurah; the Mulhaqaat; the rule of Taghleeb; recognising a Tathniyah", files: { ur: { pdf: true }, en: { pdf: true } } },
   { id: "07", number: "7", urTitle: "جمع کی اقسام", urTopics: "جمع سالم و مکسر؛ حروفِ اصلی اور اوزان؛ پندرہ مشہور اوزان؛ جمع قلت و کثرت؛ منتہى الجموع؛ اسم جمع", enTitle: "The categories of Jam'", enTopics: "Jam' Salim and Mukassar; roots and patterns; fifteen well-known patterns; Jam' Qillah and Kathrah; Muntaha al-Jumoo'; Ism ul Jam'", files: { ur: { pdf: true }, en: { pdf: true } } },
   { id: "08", number: "8", urTitle: "جمع سالم — مذکر و مؤنث", urTopics: "جمع سالم مذکر کی شرائط اور استثناءات؛ جمع سالم مؤنث؛ اسمِ منقوص اور اسمِ مقصور کی تثنیہ و جمع", enTitle: "Jam' Salim — Mudhakkar and Mu'annath", enTopics: "Conditions and exceptions of the Jam' Salim Mudhakkar; the Jam' Salim Mu'annath; the Ism Manqus and Ism Maqsur in dual and plural", files: { ur: { pdf: true }, en: { pdf: true } } },
@@ -18,8 +18,8 @@ const lessons = [
 ];
 
 const copy = {
-  ur: { description: "عربی قواعد کے تفصیلی مطالعے کے نوٹس · اسباق ۱ تا ۱۷", kicker: "مطالعہ کا ذخیرہ", title: "تمام اسباق", label: "اسباق تلاش کریں", placeholder: "عنوان یا موضوع لکھیں…", pdf: "پی ڈی ایف کھولیں", docx: "ورڈ فائل", unavailable: "جلد دستیاب", found: n => `${n.toLocaleString("ur-PK")} اسباق`, empty: "کوئی سبق نہیں ملا۔", footer: "اے میرے رب، میرے علم میں اضافہ فرما۔", note: "نوٹ: سبق ۵ کی اردو پی ڈی ایف فراہم نہیں ہوئی؛ دستیاب ہوتے ہی اسی جگہ شامل ہو جائے گی۔", ariaPdf: n => `سبق ${n} کی پی ڈی ایف کھولیں`, ariaDocx: n => `سبق ${n} کی ورڈ فائل ڈاؤن لوڈ کریں` },
-  en: { description: "Detailed study notes on Arabic grammar · Lessons 1–17", kicker: "Study library", title: "All lessons", label: "Search lessons", placeholder: "Search by title or topic…", pdf: "Open PDF", docx: "Word file", unavailable: "Coming soon", found: n => `${n} lesson${n === 1 ? "" : "s"}`, empty: "No lessons found.", footer: "My Lord, increase me in knowledge.", note: "Note: the Urdu PDF for Lesson 5 was not included and will appear here when supplied.", ariaPdf: n => `Open lesson ${n} as PDF`, ariaDocx: n => `Download lesson ${n} as a Word file` }
+  ur: { description: "عربی قواعد کے تفصیلی مطالعے کے نوٹس · اسباق ۱ تا ۱۷", kicker: "مطالعہ کا ذخیرہ", title: "تمام اسباق", label: "اسباق تلاش کریں", placeholder: "عنوان یا موضوع لکھیں…", pdf: "پی ڈی ایف کھولیں", docx: "ورڈ فائل", unavailable: "جلد دستیاب", found: n => `${n.toLocaleString("ur-PK")} اسباق`, empty: "کوئی سبق نہیں ملا۔", footer: "اے میرے رب، میرے علم میں اضافہ فرما۔", note: "", ariaPdf: n => `سبق ${n} کی پی ڈی ایف کھولیں`, ariaDocx: n => `سبق ${n} کی ورڈ فائل ڈاؤن لوڈ کریں` },
+  en: { description: "Detailed study notes on Arabic grammar · Lessons 1–17", kicker: "Study library", title: "All lessons", label: "Search lessons", placeholder: "Search by title or topic…", pdf: "Open PDF", docx: "Word file", unavailable: "Coming soon", found: n => `${n} lesson${n === 1 ? "" : "s"}`, empty: "No lessons found.", footer: "My Lord, increase me in knowledge.", note: "", ariaPdf: n => `Open lesson ${n} as PDF`, ariaDocx: n => `Download lesson ${n} as a Word file` }
 };
 
 let language = localStorage.getItem("quranGrammarLanguage") === "en" ? "en" : "ur";
@@ -36,7 +36,7 @@ function render() {
   list.innerHTML = "";
 
   filtered.forEach(lesson => {
-    const file = lesson.files[language] || {};
+    const file = { ...(lesson.files[language] || {}), docx: language === "ur" || lesson.files[language]?.docx };
     const item = document.createElement("li");
     item.className = "lesson-card";
     item.innerHTML = `
@@ -58,6 +58,7 @@ function render() {
   document.querySelector("#empty-state").textContent = t.empty;
   document.querySelector("#empty-state").hidden = filtered.length !== 0;
   document.querySelector("#availability-note").textContent = t.note;
+  document.querySelector("#availability-note").hidden = !t.note;
   document.querySelector("#footer-text").textContent = t.footer;
   document.querySelectorAll("[data-lang]").forEach(button => button.setAttribute("aria-pressed", String(button.dataset.lang === language)));
 }

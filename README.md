@@ -45,5 +45,6 @@ The lesson count and cards are generated from this one array, so no HTML changes
 ## Source-file status
 
 - English PDFs: all 16 current lesson files are present (Lectures 13–14 are combined).
-- Urdu PDFs: 15 current lesson files are present; Lecture 5 was not included in the supplied archive.
-- Word downloads: currently available for Lecture 17 in both languages.
+- Urdu PDFs: all 16 current lesson files are present (Lectures 13–14 are combined).
+- Urdu Word downloads: all 16 current lesson files are present.
+- English Word downloads: currently available for Lecture 17.
