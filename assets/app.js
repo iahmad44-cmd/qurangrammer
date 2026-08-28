@@ -18,8 +18,8 @@ const lessons = [
 ];
 
 const copy = {
-  ur: { description: "عربی قواعد کے تفصیلی مطالعے کے نوٹس · اسباق ۱ تا ۱۷", kicker: "مطالعہ کا ذخیرہ", title: "تمام اسباق", label: "اسباق تلاش کریں", placeholder: "عنوان یا موضوع لکھیں…", pdf: "پی ڈی ایف کھولیں", docx: "ورڈ فائل", unavailable: "جلد دستیاب", found: n => `${n.toLocaleString("ur-PK")} اسباق`, empty: "کوئی سبق نہیں ملا۔", footer: "اے میرے رب، میرے علم میں اضافہ فرما۔", note: "", ariaPdf: n => `سبق ${n} کی پی ڈی ایف کھولیں`, ariaDocx: n => `سبق ${n} کی ورڈ فائل ڈاؤن لوڈ کریں` },
-  en: { description: "Detailed study notes on Arabic grammar · Lessons 1–17", kicker: "Study library", title: "All lessons", label: "Search lessons", placeholder: "Search by title or topic…", pdf: "Open PDF", docx: "Word file", unavailable: "Coming soon", found: n => `${n} lesson${n === 1 ? "" : "s"}`, empty: "No lessons found.", footer: "My Lord, increase me in knowledge.", note: "", ariaPdf: n => `Open lesson ${n} as PDF`, ariaDocx: n => `Download lesson ${n} as a Word file` }
+  ur: { description: "عربی قواعد کے تفصیلی مطالعے کے نوٹس · اسباق ۱ تا ۱۷", overline: "سنجیدہ مطالعے کے لیے منظم ذخیرہ", kicker: "مطالعہ کا ذخیرہ", title: "تمام اسباق", intro: "قرآنی عربی کی زبان، ساخت اور بلاغت کا تدریجی نصاب۔", label: "اسباق تلاش کریں", placeholder: "عنوان یا موضوع لکھیں…", pdf: "پی ڈی ایف کھولیں", docx: "ورڈ فائل", unavailable: "جلد دستیاب", found: n => `${n.toLocaleString("ur-PK")} اسباق`, empty: "کوئی سبق نہیں ملا۔", footer: "اے میرے رب، میرے علم میں اضافہ فرما۔", about: "عربی کے طلبہ کے لیے دو لسانی مطالعاتی ذخیرہ۔", stats: ["اسباق", "زبانیں", "آن لائن مطالعہ", "آف لائن مطالعہ"], formats: "پی ڈی ایف اور قابلِ تدوین نوٹس", note: "", ariaPdf: n => `سبق ${n} کی پی ڈی ایف کھولیں`, ariaDocx: n => `سبق ${n} کی ورڈ فائل ڈاؤن لوڈ کریں` },
+  en: { description: "Detailed study notes on Arabic grammar · Lessons 1–17", overline: "A structured library for serious study", kicker: "Study library", title: "All lessons", intro: "A progressive course in the language, structure and eloquence of Quranic Arabic.", label: "Search lessons", placeholder: "Search by title or topic…", pdf: "Open PDF", docx: "Word file", unavailable: "Coming soon", found: n => `${n} lesson${n === 1 ? "" : "s"}`, empty: "No lessons found.", footer: "My Lord, increase me in knowledge.", about: "A bilingual study archive for students of Arabic.", stats: ["Lectures", "Languages", "Read online", "Study offline"], formats: "PDF and editable notes", note: "", ariaPdf: n => `Open lesson ${n} as PDF`, ariaDocx: n => `Download lesson ${n} as a Word file` }
 };
 
 let language = localStorage.getItem("quranGrammarLanguage") === "en" ? "en" : "ur";
@@ -50,8 +50,10 @@ function render() {
   });
 
   document.querySelector("#site-description").textContent = t.description;
+  document.querySelector("#hero-overline").textContent = t.overline;
   document.querySelector("#library-kicker").textContent = t.kicker;
   document.querySelector("#library-title").textContent = t.title;
+  document.querySelector("#library-intro").textContent = t.intro;
   document.querySelector("#search-label").textContent = t.label;
   document.querySelector("#search").placeholder = t.placeholder;
   document.querySelector("#result-count").textContent = t.found(filtered.length);
@@ -60,6 +62,9 @@ function render() {
   document.querySelector("#availability-note").textContent = t.note;
   document.querySelector("#availability-note").hidden = !t.note;
   document.querySelector("#footer-text").textContent = t.footer;
+  document.querySelector("#footer-about").textContent = t.about;
+  document.querySelector("#format-key").lastChild.textContent = ` ${t.formats}`;
+  ["#stat-lessons", "#stat-languages", "#stat-read", "#stat-download"].forEach((selector, index) => document.querySelector(selector).textContent = t.stats[index]);
   document.querySelectorAll("[data-lang]").forEach(button => button.setAttribute("aria-pressed", String(button.dataset.lang === language)));
 }
 
