@@ -11,7 +11,7 @@ for (const language of ["urdu", "english"]) {
     const [, id, ur, en] = match;
     const flags = language === "urdu" ? ur : en;
     if (/pdf: true/.test(flags)) paths.push(`pdf/${language}/lecture-${id}.pdf`);
-    if (language === "urdu" || /docx: true/.test(flags)) paths.push(`docx/${language}/lecture-${id}.docx`);
+    paths.push(`docx/${language}/lecture-${id}.docx`);
   }
 }
 
