@@ -1,50 +1,18 @@
 # Quran Grammar
 
-A bilingual Urdu/English library of Lisan ul Quran Arabic-grammar notes. The site is plain HTML, CSS and JavaScript and needs no installation.
+A bilingual Urdu/English library of Quranic Arabic grammar notes. The site is plain HTML, CSS and JavaScript. It currently covers Lectures 1–44, with some lectures grouped in combined files, plus two supplementary topics.
 
-## View it on your computer
+The public website is https://iahmad44-cmd.github.io/qurangrammer/. GitHub Actions publishes changes to GitHub Pages after a push to `main`.
 
-1. Open this folder.
-2. Double-click `index.html`.
-3. The website opens in your browser. PDF links work when the folder structure is kept unchanged.
+## Add future lectures
 
-## Publish with GitHub Pages
+1. Place each source PDF and Word file in `pdf/urdu`, `pdf/english`, `docx/urdu`, or `docx/english`, using the existing `lecture-<id>` naming pattern. Keep combined ranges as one ID, such as `lecture-45-46`.
+2. Add one lesson object to the `lessons` array in `assets/app.js`, with Urdu and English titles and topic summaries. Set each language's `pdf` flag to `true` only if its PDF exists. Every listed lesson needs both Word files under the current renderer.
+3. Update the displayed lecture range and count in `assets/app.js` and `index.html`.
+4. Run `node check-links.mjs` before publishing. It checks all links advertised by the cards.
 
-This repository includes an automatic GitHub Pages workflow.
+## Source status
 
-1. Open the repository on GitHub.
-2. Choose **Settings → Pages**.
-3. Under **Build and deployment**, set **Source** to **GitHub Actions**.
-4. Open the **Actions** tab and wait for “Deploy static site to Pages” to finish.
-5. Return to **Settings → Pages** to find the published address.
-
-## Publish with Netlify Drop
-
-1. Visit [app.netlify.com/drop](https://app.netlify.com/drop).
-2. Drag this entire project folder onto the page.
-3. Wait for Netlify to upload it and show the live address.
-
-## Add a future lesson
-
-Suppose the next lesson is Lecture 18.
-
-1. Add the available files using exactly these names:
-   - `pdf/urdu/lecture-18.pdf`
-   - `pdf/english/lecture-18.pdf`
-   - `docx/urdu/lecture-18.docx` (if available)
-   - `docx/english/lecture-18.docx` (if available)
-2. Open `assets/app.js` in a text editor.
-3. At the end of the `lessons` array, copy the complete object for Lecture 17, including its opening `{` and closing `}`.
-4. Paste a comma after Lecture 17, then paste the copied object beneath it.
-5. Change `id` and `number` to `"18"`. Replace the four title/topic fields with Lecture 18 text.
-6. Set each available file to `true`. Omit a `docx` entry or set it to `false` when there is no Word file. The website never creates a broken link for a file marked unavailable.
-7. Save the file, open `index.html`, and search for Lecture 18 to check both languages.
-
-The lesson count and cards are generated from this one array, so no HTML changes are needed. The same pattern supports Lecture 19 and later lessons.
-
-## Source-file status
-
-- English PDFs: all 16 current lesson files are present (Lectures 13–14 are combined).
-- Urdu PDFs: all 16 current lesson files are present (Lectures 13–14 are combined).
-- Urdu Word downloads: all 16 current lesson files are present.
-- English Word downloads: currently available for Lecture 17.
+- Lectures 1–44 are represented in both languages. Combined files include 13–14, 20–21, 27–28, 31–32, 33–34, 35–36, 40–41, and 42–43.
+- The supplementary notes cover Adad wa Madood and Murakkab Atfi, in both languages and both formats.
+- The supplied archive did not contain an Urdu PDF for Lecture 29. Its Urdu Word file and both English files are available; the website does not offer a broken Urdu PDF link.
