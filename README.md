@@ -1,8 +1,12 @@
-# Quran Grammar
+# Lisan Ul Quran
 
-A bilingual Urdu/English library of Quranic Arabic grammar notes. The site is plain HTML, CSS and JavaScript. It currently covers Lectures 1–44, with some lectures grouped in combined files, plus two supplementary topics.
+A professional, zero-build Quranic Arabic learning platform. It brings together the complete 2023 Part 1 and Part 2 cohorts, the bilingual 2024 foundation notes, the Advanced course, and Tarkeeb Kese Karain.
 
-The public website is https://iahmad44-cmd.github.io/qurangrammer/. GitHub Actions publishes changes to GitHub Pages after a push to `main`.
+The catalogue includes 171 lesson resources, 42 printable practice papers, and 38 Google Forms. All form links use verified public examinee `/viewform` URLs; owner and edit links are rejected by `verify-site.mjs`.
+
+## Verify and deploy
+
+Run `node --check assets/platform.js`, `node verify-site.mjs`, and `node verify-site.mjs --remote`. Vercel can deploy the repository as a static site with no build command or environment variables.
 
 ## Add future lectures
 

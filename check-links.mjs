@@ -3,7 +3,7 @@ import { resolve } from "node:path";
 
 const root = new URL("./", import.meta.url);
 const html = await readFile(new URL("index.html", root), "utf8");
-const js = await readFile(new URL("assets/app.js", root), "utf8");
+const js = await readFile(new URL("assets/platform.js", root), "utf8");
 
 const paths = [];
 for (const language of ["urdu", "english"]) {
@@ -28,7 +28,7 @@ for (const path of paths) {
     failed++;
   }
 }
-if (!html.includes('assets/app.js') || !js.includes('href="pdf/${') || !js.includes('href="docx/${')) {
+if (!html.includes('assets/platform.js') || !js.includes('pdf/urdu/lecture-${id}.pdf') || !js.includes('pdf/english/lecture-${id}.pdf')) {
   console.log("FAIL    rendered-link templates are missing");
   failed++;
 }

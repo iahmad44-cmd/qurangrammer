@@ -1,0 +1,2 @@
+.hero{width:100%;margin:0}.hero-copy{min-width:0}
+@media(max-width:760px){.hero{width:100%;margin:0}.hero-copy{width:100%;max-width:100%;min-width:0}.hero h1{max-width:100%;font-size:clamp(2.3rem,10vw,2.55rem);line-height:.98;overflow-wrap:anywhere}.hero-summary{width:100%;max-width:100%;font-size:.78rem;overflow-wrap:anywhere}}
